@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hopeworldwide-trichy.org/sitemap.xml
+Sitemap: https://hopeworldwidetrichy.vercel.app/sitemap.xml
