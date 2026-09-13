@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Page Not Found • HOPE worldwide Orphanage Trichy</title>
+  <meta name="description" content="Page not found. Return to HOPE worldwide Orphanage Trichy website."/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#00152b",
+            "primary-container": "#102a45",
+            secondary: "#0051d3",
+            "border-subtle": "#CDE1F4",
+            "surface-canvas": "#F4F8FC",
+            "surface-card": "#FFFFFF",
+            "dark-canvas": "#0b1320",
+            "dark-card": "#132035",
+            "dark-border": "#223854",
+            "dark-text": "#edf0ff",
+            "dark-muted": "#9cb1cc"
+          },
+          fontFamily: {
+            sans: ["Public Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .btn-primary {
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), filter 0.22s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.06);
+      box-shadow: 0 4px 14px rgba(0, 81, 211, 0.28), 0 0 8px rgba(0, 81, 211, 0.15);
+    }
+    .dark .btn-primary:hover {
+      box-shadow: 0 4px 18px rgba(0, 81, 211, 0.4), 0 0 10px rgba(0, 81, 211, 0.25);
+    }
+    .btn-secondary {
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(0, 81, 211, 0.08);
+    }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #0051d3 !important;
+      outline-offset: 2px !important;
+    }
+    .dark a:focus-visible, .dark button:focus-visible {
+      outline: 2px solid #4d8eff !important;
+      outline-offset: 2px !important;
+    }
+  </style>
+  <script>
+    // Theme initializer
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+</head>
+<body class="bg-surface-canvas dark:bg-dark-canvas text-[#141b2b] dark:text-dark-text min-h-screen flex flex-col font-sans transition-colors duration-150 selection:bg-secondary selection:text-white">
+  <!-- Minimal Header -->
+  <header class="border-b border-border-subtle dark:border-dark-border bg-surface-card dark:bg-dark-card sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/images/logo.png" alt="HOPE worldwide Trichy" class="h-10 w-auto object-contain rounded border border-border-subtle dark:border-dark-border" />
+        <span class="font-bold text-lg text-primary dark:text-dark-text tracking-tight">HOPE worldwide Trichy</span>
+      </a>
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" class="p-2 rounded border border-border-subtle dark:border-dark-border text-primary dark:text-dark-text hover:bg-surface-canvas dark:hover:bg-dark-canvas transition-colors" aria-label="Toggle theme">
+          <span class="material-symbols-outlined text-xl theme-icon-sun hidden dark:inline">light_mode</span>
+          <span class="material-symbols-outlined text-xl theme-icon-moon inline dark:hidden">dark_mode</span>
+        </button>
+        <a href="index.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-secondary text-white text-sm font-semibold rounded hover:bg-[#1346aa] transition-colors">
+          <span class="material-symbols-outlined text-base">home</span>
+          <span>Home</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Content -->
+  <main class="flex-grow flex items-center justify-center p-6">
+    <div class="max-w-lg w-full text-center py-12 px-8 bg-surface-card dark:bg-dark-card border border-border-subtle dark:border-dark-border rounded-lg shadow-sm">
+      <div class="w-16 h-16 mx-auto mb-6 rounded bg-surface-canvas dark:bg-dark-canvas border border-border-subtle dark:border-dark-border flex items-center justify-center text-secondary">
+        <span class="material-symbols-outlined text-3xl">error_outline</span>
+      </div>
+      <span class="text-xs uppercase tracking-widest text-secondary font-semibold">404 Error</span>
+      <h1 class="text-2xl md:text-3xl font-bold text-primary dark:text-dark-text mt-2 mb-4 tracking-tight">Page Not Found</h1>
+      <p class="text-sm text-gray-600 dark:text-dark-muted mb-8 leading-relaxed">
+        The requested page does not exist or may have been moved. Please return to the homepage to explore the campus facilities, location, and contact information.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="index.html" class="btn-primary inline-flex items-center gap-2 px-6 py-2.5 bg-secondary text-white text-sm font-semibold rounded transition-colors">
+          <span class="material-symbols-outlined text-base">arrow_back</span>
+          <span>Return to Homepage</span>
+        </a>
+        <a href="index.html#contact" class="btn-secondary inline-flex items-center gap-2 px-5 py-2.5 border border-primary dark:border-dark-border text-primary dark:text-dark-text text-sm font-semibold rounded hover:bg-surface-canvas dark:hover:bg-dark-canvas transition-colors">
+          <span>Contact Administration</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-border-subtle dark:border-dark-border bg-surface-card dark:bg-dark-card py-6 text-center text-xs text-gray-500 dark:text-dark-muted">
+    <p>© HOPE worldwide Orphanage Trichy. Managing Director: S. Suresh • Trichy, Tamil Nadu, India.</p>
+  </footer>
+
+  <script>
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn?.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
