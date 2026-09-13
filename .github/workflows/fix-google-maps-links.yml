@@ -1,0 +1,59 @@
+name: Fix Google Maps links
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Replace generic Google Maps links
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          old = 'https://maps.google.com/?q=Trichy+Tamil+Nadu+India'
+          new = 'https://maps.app.goo.gl/5fDorTJesUNaKoEn8?g_st=aw'
+          if old in s:
+              s = s.replace(old, new)
+              p.write_text(s, encoding='utf-8')
+              print('Updated Google Maps links.')
+          else:
+              print('No generic Google Maps links found.')
+          PY
+
+      - name: Commit changes if needed
+        shell: bash
+        run: |
+          if git diff --quiet -- index.html; then
+            echo 'No changes needed.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Fix Google Maps destination links'
+          git push
+
+      - name: Remove temporary workflow
+        if: always()
+        shell: bash
+        run: |
+          rm -f .github/workflows/fix-google-maps-links.yml
+          if git diff --quiet -- .github/workflows/fix-google-maps-links.yml; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -u .github/workflows/fix-google-maps-links.yml
+          git commit -m 'Remove temporary Google Maps fix workflow'
+          git push
