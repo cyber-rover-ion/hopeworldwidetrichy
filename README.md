@@ -1,36 +1,39 @@
-# hopeworldwidetrichy
+# HOPE worldwide Orphanage Trichy Website
 
-A website for HOPE worldwide Orphanage Trichy, presenting information about the residential care facility and its facilities in Tiruchirappalli, Tamil Nadu.
+A responsive informational website presenting the facility, spaces, and location of HOPE worldwide Orphanage in Tiruchirappalli, Tamil Nadu.
 
 ## Overview
 
-The website provides an informational presentation of the facility, including residential accommodation, study areas, recreation, dining, photographs, and location information.
+This project provides a public-facing web presentation of the facility, with information and visuals intended to help visitors understand the available spaces and services.
 
 ## Website Features
 
 - Responsive informational layout
 - Facility and accommodation information
-- Photo sections
+- Photo gallery sections
 - Interactive map
 - Video presentation
 - Responsive navigation
 - Light and dark interface support
-- Accessibility and reduced-motion considerations
+- Accessibility-conscious and reduced-motion considerations
 
 ## Technology
-
-The current website uses:
 
 - HTML
 - Tailwind CSS via CDN
 - JavaScript
 - MapLibre GL
-- Public Sans and Material Symbols
+- Public Sans
+- Material Symbols
 
-## Purpose
+## Local Preview
 
-The project serves as a public-facing website for presenting the facility and its available spaces and services in a clear, accessible format.
+Open the site's HTML entry point in a modern browser. If map tiles or other external assets are required, an internet connection may be necessary.
 
-## Creator
+## Project Purpose
 
-Made by **JebinTech**.
+The website is intended to present facility information clearly across desktop and mobile devices. For current operational details, visitors should confirm information with the organization directly.
+
+## Maintainer
+
+**JebinTech**
