@@ -1568,7 +1568,10 @@
       if (fallbackLink) fallbackLink.href = whatsappUrl;
       if (fallbackCard) {
         fallbackCard.classList.remove('hidden');
-        fallbackCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        fallbackCard.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'nearest'
+        });
       }
 
       // Open WhatsApp deep link in new tab/window
@@ -1581,6 +1584,10 @@
 
     function copyFallbackMessage() {
       if (!lastGeneratedEnquiryText) return;
+      if (!navigator.clipboard || typeof navigator.clipboard.writeText !== 'function') {
+        alert('Clipboard access is unavailable in this browser or page context. Please select and copy the enquiry text manually.');
+        return;
+      }
       navigator.clipboard.writeText(lastGeneratedEnquiryText).then(() => {
         const copyBtnText = document.getElementById('copy-btn-text');
         if (copyBtnText) {
