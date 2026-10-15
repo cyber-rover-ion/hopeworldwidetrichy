@@ -37,3 +37,6 @@ The website is intended to present facility information clearly across desktop a
 ## Maintainer
 
 **JebinTech**
+
+- GitHub: [@cyber-rover-ion](https://github.com/cyber-rover-ion)
+- Instagram: [@constantine.hell](https://www.instagram.com/constantine.hell/)
